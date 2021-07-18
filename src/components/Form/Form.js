@@ -20,16 +20,12 @@ class Form extends Component {
     hadleSubmit = event => {
         event.preventDefault();
 
-        this.props.onSubmit(this.state);
+        this.props.onSubmit(this.state.name, this.state.number);
 
-        this.reset();
-    };
-
-    reset = () => {
         this.setState({ name: '', number: '' });
     };
 
-    render() {
+        render() {
         return (
             <form className={style.form} onSubmit={this.hadleSubmit}>
                 <label className={style.label} htmlFor={this.nameInputId}>

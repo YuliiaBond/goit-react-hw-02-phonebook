@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; 
+import React, { Component } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import Container from './components/Container';
 import Form from './components/Form';
 import Contacts from './components/Contacts';
@@ -14,10 +15,21 @@ class App extends Component {
   name: '',
   number: ''
 }
-  
-  formSubmitHandler = data => {
-    console.log(data);
+  addContact = (name, number) => {
+    const contact = {
+      id: uuidv4(),
+      name,
+      number,
+    };
+
+    this.setState(({ contacts }) => ({
+      contacts: [contact, ...contacts],
+    }));
   };
+
+  // formSubmitHandler = data => {
+  //   console.log(data);
+  // };
 
   deleteContact = contactId => {
     this.setState(prevState => ({
@@ -32,7 +44,7 @@ class App extends Component {
 
         <h1>Phonebook</h1>
 
-        <Form onSubmit={this.formSubmitHandler} />
+        <Form onSubmit={this.addContact} />
 
         <Contacts
           contacts={contacts}
