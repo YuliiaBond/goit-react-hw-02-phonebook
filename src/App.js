@@ -15,7 +15,7 @@ class App extends Component {
   ],
   filter: '',
   }
-  
+
   addContact = (name, number) => {
     const contact = {
       id: uuidv4(),
@@ -23,9 +23,15 @@ class App extends Component {
       number,
     };
 
-    this.setState(({ contacts }) => ({
+    if (!this.state.contacts.map(contact => contact.name).includes(name)) {
+      this.setState(({ contacts }) => ({
       contacts: [contact, ...contacts],
     }));
+    } else {
+      alert(`${name} is already in contacs.`)
+    }
+
+    
   };
 
   changeFilter = event => {
