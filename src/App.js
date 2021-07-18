@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Container from './components/Container';
 import Form from './components/Form';
+import Filter from './components/Filter';
 import Contacts from './components/Contacts';
+
 class App extends Component {
   state = {
   contacts: [
@@ -12,9 +14,8 @@ class App extends Component {
     {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
   ],
   filter: '',
-  name: '',
-  number: ''
-}
+  }
+  
   addContact = (name, number) => {
     const contact = {
       id: uuidv4(),
@@ -27,9 +28,18 @@ class App extends Component {
     }));
   };
 
-  // formSubmitHandler = data => {
-  //   console.log(data);
-  // };
+  changeFilter = event => {
+    this.setState({ filter: event.currentTarget.value });
+  };
+
+  getVisibleContacts = () => {
+    const { filter, contacts } = this.state;
+    const normalizeFilter = filter.toLowerCase();
+
+    return contacts.filter(contact =>
+      contact.name.toLowerCase().includes(normalizeFilter),
+    );
+  };
 
   deleteContact = contactId => {
     this.setState(prevState => ({
@@ -38,7 +48,9 @@ class App extends Component {
   };
 
   render() {
-    const { contacts, number } = this.state;
+    const { filter } = this.state;
+    const visibleContacts = this.getVisibleContacts();
+
     return (
       <Container>
 
@@ -46,9 +58,15 @@ class App extends Component {
 
         <Form onSubmit={this.addContact} />
 
+        <h2>Contacts</h2>
+
+        <Filter
+          value={filter}
+          onChange={this.changeFilter}
+          />
+
         <Contacts
-          contacts={contacts}
-          number={number}
+          contacts={visibleContacts}
           onDeleteContact={this.deleteContact}
         />
         
