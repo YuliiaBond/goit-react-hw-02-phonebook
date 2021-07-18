@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.js": "/goit-react-hw-02-phonebook/static/js/main.47dabe5d.chunk.js",
-    "main.js.map": "/goit-react-hw-02-phonebook/static/js/main.47dabe5d.chunk.js.map",
-    "runtime-main.js": "/goit-react-hw-02-phonebook/static/js/runtime-main.e9b3921b.js",
-    "runtime-main.js.map": "/goit-react-hw-02-phonebook/static/js/runtime-main.e9b3921b.js.map",
-    "static/js/2.e4f141c0.chunk.js": "/goit-react-hw-02-phonebook/static/js/2.e4f141c0.chunk.js",
-    "static/js/2.e4f141c0.chunk.js.map": "/goit-react-hw-02-phonebook/static/js/2.e4f141c0.chunk.js.map",
-    "static/js/3.d73fe4bb.chunk.js": "/goit-react-hw-02-phonebook/static/js/3.d73fe4bb.chunk.js",
-    "static/js/3.d73fe4bb.chunk.js.map": "/goit-react-hw-02-phonebook/static/js/3.d73fe4bb.chunk.js.map",
+    "main.css": "/goit-react-hw-02-phonebook/static/css/main.d3970c06.chunk.css",
+    "main.js": "/goit-react-hw-02-phonebook/static/js/main.8b632289.chunk.js",
+    "main.js.map": "/goit-react-hw-02-phonebook/static/js/main.8b632289.chunk.js.map",
+    "runtime-main.js": "/goit-react-hw-02-phonebook/static/js/runtime-main.ef4ad014.js",
+    "runtime-main.js.map": "/goit-react-hw-02-phonebook/static/js/runtime-main.ef4ad014.js.map",
+    "static/js/2.e01927e9.chunk.js": "/goit-react-hw-02-phonebook/static/js/2.e01927e9.chunk.js",
+    "static/js/2.e01927e9.chunk.js.map": "/goit-react-hw-02-phonebook/static/js/2.e01927e9.chunk.js.map",
+    "static/js/3.969eb8f4.chunk.js": "/goit-react-hw-02-phonebook/static/js/3.969eb8f4.chunk.js",
+    "static/js/3.969eb8f4.chunk.js.map": "/goit-react-hw-02-phonebook/static/js/3.969eb8f4.chunk.js.map",
     "index.html": "/goit-react-hw-02-phonebook/index.html",
-    "static/js/2.e4f141c0.chunk.js.LICENSE.txt": "/goit-react-hw-02-phonebook/static/js/2.e4f141c0.chunk.js.LICENSE.txt"
+    "static/css/main.d3970c06.chunk.css.map": "/goit-react-hw-02-phonebook/static/css/main.d3970c06.chunk.css.map",
+    "static/js/2.e01927e9.chunk.js.LICENSE.txt": "/goit-react-hw-02-phonebook/static/js/2.e01927e9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e9b3921b.js",
-    "static/js/2.e4f141c0.chunk.js",
-    "static/js/main.47dabe5d.chunk.js"
+    "static/js/runtime-main.ef4ad014.js",
+    "static/js/2.e01927e9.chunk.js",
+    "static/css/main.d3970c06.chunk.css",
+    "static/js/main.8b632289.chunk.js"
   ]
 }
